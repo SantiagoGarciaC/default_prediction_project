@@ -7,8 +7,24 @@
 
 ## Datos
 
-Los datos del proyecto vienen de [American Express - Default Prediction](https://www.kaggle.com/competitions/amex-default-prediction/), y se pueden hacer disponibles ejecutando desde cualquier notebook en Colab los siguientes comandos
+Los datos del proyecto vienen de [American Express - Default Prediction](https://www.kaggle.com/competitions/amex-default-prediction/), y se pueden hacer disponibles después de haber descargado el archivo `.json` desde Kaggle en Account, API, Create New API Token. Luego ejecutamos desde cualquier notebook en Colab los siguientes comandos y cargamos el archivo `.json` cuando se nos pida. 
 
-    kaggle competitions download -c amex-default-prediction
+    ! pip install -q kaggle
+
+    form google.colab import files
+
+    files.upload()
+
+    ! mkdir ~/.kaggle
+
+    ! cp kaggle.json ~/.kaggle/
+
+    ! chmod 600 ~/.kaggle/kaggle.json
+
+    ! kaggle datasets list
+
+    ! kaggle competitions download -c amex-default-prediction
+
+    !unzip amex-default-prediction.zip
     
-después de haber configurado `.kaggle/kaggle.json` de tal y tal manera.
+
