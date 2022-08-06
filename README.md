@@ -11,7 +11,7 @@ Los datos del proyecto vienen de [American Express - Default Prediction](https:/
 
     ! pip install -q kaggle
 
-    form google.colab import files
+    from google.colab import files
 
     files.upload()
 
