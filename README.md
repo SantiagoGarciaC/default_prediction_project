@@ -26,5 +26,9 @@ Los datos del proyecto vienen de [American Express - Default Prediction](https:/
     ! kaggle competitions download -c amex-default-prediction
 
     !unzip amex-default-prediction.zip
+
+    !rm amex-default-prediction.zip
+
+En la  última línea borramos el archivo comprimido dado que necesitaremos este espacio de disco en Google Colab.
     
 
