@@ -2,10 +2,8 @@ from sklearn.model_selection import learning_curve
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-def plot_learning_curve(self): 
-
-  train_sizes, train_scores, test_scores = learning_curve(self.estimator, self.X, self.y, cv=self.cv, shuffle=True)
+def plot_learning_curve(estimator,X,y,cv): 
+  train_sizes, train_scores, test_scores = learning_curve(estimator, X, y, cv=cv, shuffle=True)
   train_scores_mean = np.mean(train_scores, axis=1)
   train_scores_std = np.std(train_scores, axis=1)
   test_scores_mean = np.mean(test_scores, axis=1)
@@ -31,5 +29,5 @@ def plot_learning_curve(self):
   plt.legend(loc="best")
   plt.ylabel("Score")
   plt.xlabel("Training examples")
-  plt.title(self.estimator.__class__.__name__)
+  plt.title(estimator.__class__.__name__)
   return plt.show()
