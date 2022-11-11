@@ -1,7 +1,7 @@
 class plot_learning_curve():
   import matplotlib.pyplot as plt
   import numpy as np
-  from sklearn.model_selection import learning_curve
+  
   def __init__(self,estimator,X,y,cv):
     self.estimator = estimator
     self.X = X
@@ -10,6 +10,7 @@ class plot_learning_curve():
 
 
   def plot(self): 
+    from sklearn.model_selection import learning_curve
     train_sizes, train_scores, test_scores = learning_curve(self.estimator, self.X, self.y, cv=self.cv, shuffle=True)
     train_scores_mean = np.mean(train_scores, axis=1)
     train_scores_std = np.std(train_scores, axis=1)
