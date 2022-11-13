@@ -32,3 +32,7 @@ Los datos del proyecto vienen de [American Express - Default Prediction](https:/
 En la  última línea borramos el archivo comprimido dado que necesitaremos este espacio de disco en Google Colab.
     
 
+## Videos
+
+- [Video entrega final](https://youtu.be/jFFy-aXcy2c)
+
